@@ -1,0 +1,134 @@
+/* 
+  Name: Sadie Coleman
+  Date: 6/22/2025
+  Adapted from: Wes Bos's JS30 Drum Kit
+  New CSS explored: transitions, transforms, :active states
+  Modifications: Customized color scheme, hover/click effects, layout changes, accessibility
+*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  font-family: 'Orbitron', sans-serif;
+}
+
+html {
+  font-size: 10px;
+  background: url('./background.jpg') bottom center;
+  background-size: cover;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: 0.4rem solid black;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+  animation: glitch 0.15s linear;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+}
+
+html::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.key:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border-color: #7CB9BE;
+  box-shadow: 0 0 0.5rem #7CB9BE;
+}
+
+@media (max-width: 600px) {
+  .key {
+    font-size: 1.2rem;
+    padding: 0.8rem 0.4rem;
+    width: 8rem;
+  }
+
+  kbd {
+    font-size: 3rem;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0, 0) scale(1.1) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-2px, 2px) scale(1.12) rotate(-1deg);
+  }
+
+  50% {
+    transform: translate(2px, -2px) scale(1.1) rotate(1deg);
+  }
+
+  75% {
+    transform: translate(-1px, 1px) scale(1.11) rotate(-0.5deg);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1.1) rotate(0deg);
+  }
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.key-content {
+  position: relative;
+}
