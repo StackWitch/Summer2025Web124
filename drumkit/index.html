@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="icon" href="https://fav.farm/🔥" />
+  <!-- 
+  Name: Sadie Coleman
+  Date: 6/22/2025
+  Project: JS30 - Drum Kit (Modified)
+  Adapted from Wes Bos’s JavaScript30 - https://javascript30.com
+  New Concepts: <audio> element, <kbd>, data-* attributes
+  Significant Modifications: Added click functionality, changed sounds, updated layout
+  Significant HTML modification:
+Added hidden screen-reader-only labels inside each key to improve accessibility and semantic clarity.
+-->
+
+</head>
+
+<body>
+
+  <div class="keys">
+    <div data-key="65" class="key">
+      <div class="key-content">
+        <kbd>A</kbd>
+        <span class="sound">clap</span>
+      </div>
+      <span class="sr-only">Play Clap Sound</span>
+    </div>
+    <div data-key="83" class="key">
+      <div class="key-content">
+        <kbd>S</kbd>
+        <span class="sound">hihat</span>
+      </div>
+      <span class="sr-only">Play Hi-Hat Sound</span>
+    </div>
+    <div data-key="68" class="key">
+      <div class="key-content">
+        <kbd>D</kbd>
+        <span class="sound">kick</span>
+      </div>
+      <span class="sr-only">Play Kick Drum Sound</span>
+    </div>
+    <div data-key="70" class="key">
+      <div class="key-content">
+        <kbd>F</kbd>
+        <span class="sound">openhat</span>
+      </div>
+      <span class="sr-only">Play Open Hi-Hat Sound</span>
+    </div>
+    <div data-key="71" class="key">
+      <div class="key-content">
+        <kbd>G</kbd>
+        <span class="sound">boom</span>
+      </div>
+      <span class="sr-only">Play Boom Sound</span>
+    </div>
+    <div data-key="72" class="key">
+      <div class="key-content">
+        <kbd>H</kbd>
+        <span class="sound">ride</span>
+      </div>
+      <span class="sr-only">Play Ride Cymbal Sound</span>
+    </div>
+    <div data-key="74" class="key">
+      <div class="key-content">
+        <kbd>J</kbd>
+        <span class="sound">snare</span>
+      </div>
+      <span class="sr-only">Play Snare Drum Sound</span>
+    </div>
+    <div data-key="75" class="key">
+      <div class="key-content">
+        <kbd>K</kbd>
+        <span class="sound">tom</span>
+      </div>
+      <span class="sr-only">Play Tom Drum Sound</span>
+    </div>
+    <div data-key="76" class="key">
+      <div class="key-content">
+        <kbd>L</kbd>
+        <span class="sound">tink</span>
+      </div>
+      <span class="sr-only">Play Tink Sound</span>
+    </div>
+  </div>
+
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tink.wav"></audio>
+
+  <script>
+
+  </script>
+
+
+</body>
+
+</html>
