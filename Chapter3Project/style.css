@@ -1,0 +1,158 @@
+/*
+  Author: /.Sadie/
+  Date: 2025-06-28
+  WEB124 Chapter 3 Project — Fun & Vibrant Style
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: linear-gradient(135deg, #220044, #330066);
+  font-family: 'Roboto', sans-serif;
+  color: #eee;
+  font-size: 16px;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+body {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(20, 20, 60, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ff44cc88;
+  padding: 2rem 3rem;
+  backdrop-filter: blur(6px);
+  border: 2px solid #ff44cc;
+  animation: pulseBorder 4s ease-in-out infinite alternate;
+}
+
+/* Pulsing border animation */
+@keyframes pulseBorder {
+  0% {
+    box-shadow: 0 0 20px #ff44cc88;
+  }
+  100% {
+    box-shadow: 0 0 40px #ff66eecc;
+  }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #ff44cc;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  color: #ff77dd;
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-style: italic;
+  color: #cc99ffaa;
+}
+
+section h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.6rem;
+  color: #ff55bb;
+  margin-bottom: 1.2rem;
+  border-bottom: 3px solid #ff66cc;
+  padding-bottom: 0.4rem;
+  text-shadow: 0 0 6px #ff55bbcc;
+}
+
+/* Articles (cards with glitchy effect) */
+article {
+  background: #2a004fdd;
+  padding: 1.3rem 1.8rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  position: relative;
+  box-shadow:
+    1px 0 #ff44cc,
+    -1px 0 #66aaff,
+    0 1px #ff66ee,
+    0 -1px #44ccff;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+article:hover {
+  transform: translateX(6px) skewX(-3deg);
+  box-shadow:
+    2px 0 #ff77ee,
+    -2px 0 #88bbff,
+    0 2px #ff88ff,
+    0 -2px #66ddff;
+}
+
+/* Headings inside articles */
+article h3 {
+  font-family: 'Press Start 2P', cursive;
+  color: #ff99dd;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 0 6px #ff99ddcc;
+}
+
+/* Paragraph answers */
+article p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* Code styling */
+code {
+  background: #330066cc;
+  color: #ff77cc;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #ff44ccaa;
+  font-weight: 700;
+  text-shadow: 0 0 4px #ff44ccbb;
+}
+
+/* Epic Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #cc99ffaa;
+  text-shadow: 0 0 4px #ff55bbcc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1.5rem;
+    border-radius: 0;
+    box-shadow: none;
+    background: #220044dd;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  article {
+    padding: 1rem 1.2rem;
+  }
+}
