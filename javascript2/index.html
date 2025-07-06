@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Sadie Coleman" />
+  <meta name="date" content="2025-07-06" />
+  <title>Analog + Digital Clock</title>
+  <!--
+  Sadie Coleman - 2025-07-06
+  Project: JavaScript30 #2 Clock - Improved Version
+
+  Credits:
+  - Clock structure and functionality inspired by Wes Bos's JavaScript30 #2 Clock
+  - Improvements and documentation inspired by Professor Lisa Fredrickson's demo at Johnson County Community College
+
+  What was new or challenging:
+  - Switched unique elements from classes to IDs for semantic correctness
+  - Structured clock layout with analog clock on top and digital clock below
+  - Added meta tags for author and date to meet documentation requirements
+
+  Significant improvements made:
+  - Reorganized HTML to use IDs for hour, minute, and second hands
+  - Added digital time element below analog clock for better user experience
+-->
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="clock-wrapper">
+  <div class="clock">
+    <div id="hour-hand" class="hand"></div>
+    <div id="minute-hand" class="hand"></div>
+    <div id="second-hand" class="hand"></div>
+  </div>
+  <div id="digital-time" class="digital-time"></div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
