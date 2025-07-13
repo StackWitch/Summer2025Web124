@@ -1,0 +1,37 @@
+<!--
+  Name: Sadie Coleman
+  Date: 2025-07-13
+  Source: Based on Wes Bos JavaScript30 - Update CSS Variables with JS
+  Notes: Customized with personal image and Refactored HTML for semantic structure and accessibility
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Variable Control Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Control the Void</h1>
+    <section class="controls">
+      <label for="spacing">Spacing</label>
+      <input id="spacing" type="range" name="spacing" min="0" max="100" value="10" data-sizing="px" />
+
+      <label for="blur">Blur</label>
+      <input id="blur" type="range" name="blur" min="0" max="25" value="5" data-sizing="px" />
+
+      <label for="base">Base Color</label>
+      <input id="base" type="color" name="base" value="#00bfff" />
+    </section>
+
+    <figure>
+      <img src="epbaby.jpg" alt="Divine Cat Entity" />
+      <figcaption>Experiment with the CSS variables using the controls above.</figcaption>
+    </figure>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
