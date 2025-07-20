@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScript30: Custom Video Player</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+
+<body>
+ <!--
+  Sadie Coleman
+  Date: 2025-07-20
+  Project: JavaScript30 #11 – Custom Video Player
+  Source: https://javascript30.com
+
+  Description:
+  - Custom video player displaying concert footage from Smashing Pumpkins.
+  - Video uses custom controls including play/pause, volume, playback speed, and skip.
+  - Accessibility features added: ARIA labels, keyboard controls supported.
+  - Default browser controls are disabled to use custom controls only.
+-->
+
+
+  <main class="player" role="region" aria-label="Custom Video Player">
+    <h1>Video taken by Sadie — Smashing Pumpkins Concert 2024</h1>
+
+    <!-- Video element, no controls attribute so native controls hidden -->
+    <video class="viewer" src="smashing-pumpkins.mp4" tabindex="0">
+      Sorry, your browser doesn’t support embedded videos.
+    </video>
+
+    <!-- Progress bar -->
+    <div class="progress" aria-label="Video progress bar" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+      <div class="progress__filled"></div>
+    </div>
+
+    <!-- Controls -->
+    <div class="player__controls">
+      <button class="player__button toggle" title="Toggle Play" aria-label="Toggle Play/Pause">►</button>
+
+      <!-- Volume control with icon -->
+      <div class="slider-container">
+        <span class="slider-icon" aria-hidden="true">🔊</span>
+        <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1" aria-label="Volume control" />
+      </div>
+
+      <!-- Playback rate control with icon -->
+      <div class="slider-container">
+        <span class="slider-icon" aria-hidden="true">⏩</span>
+        <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1" aria-label="Playback speed control" />
+      </div>
+
+      <button data-skip="-10" class="player__button" title="Rewind 10 seconds" aria-label="Skip Backward">« 10s</button>
+      <button data-skip="10" class="player__button" title="Forward 10 seconds" aria-label="Skip Forward">10s »</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
